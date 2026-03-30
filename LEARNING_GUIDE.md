@@ -60,190 +60,232 @@ Follow this structure for every notebook:
 
 ## Phase 1 — Text Processing and Tokenization
 
-Goal: Understand how raw text is converted into machine-readable format and how modern systems process text.
+Goal: Understand how language is converted into structured input before any model processes it.
 
-### Day 1 — Text Preprocessing Basics
+### Day 1 — Text Preprocessing Foundations
 - Text normalization  
-- Lowercasing, punctuation removal  
+- Lowercasing  
+- Removing punctuation  
 - Stopwords  
-- When not to preprocess  
+- Stemming  
+- Lemmatization  
+- Why preprocessing matters  
+- When NOT to preprocess  
 
-### Day 2 — Advanced Cleaning
+### Day 2 — Advanced Cleaning and Regex
 - Unicode normalization  
 - Handling emojis  
-- URLs, numbers, special characters  
-- Regex basics  
+- Handling URLs  
+- Handling numbers  
+- Handling special characters  
+- Regex for text processing  
+- Building a preprocessing pipeline  
 
 ### Day 3 — Tokenization Fundamentals
-- Word, sentence, and character tokenization  
-- Token boundary challenges  
-- Comparison of libraries such as spaCy and NLTK  
+- Word tokenization  
+- Sentence tokenization  
+- Character tokenization  
+- Token boundary problems  
+- NLTK vs spaCy tokenization  
 
-### Day 4 — Subword Tokenization
+### Day 4 — Subword Tokenization (LLM Foundation)
 - Byte Pair Encoding (BPE)  
 - WordPiece  
 - SentencePiece  
-- Why subword tokenization is used in LLMs  
+- Unigram Language Model tokenizer  
+- Why LLMs use subword tokenization  
 
-### Day 5 — Vocabulary and OOV
-- Vocabulary creation  
-- Out-of-vocabulary problem  
+### Day 5 — Vocabulary and Text Statistics
+- Vocabulary construction  
+- OOV (Out-of-vocabulary problem)  
 - Token distribution  
-- Zipf’s Law (intuitive understanding)  
+- Zipf’s Law  
+- Vocabulary size trade-offs  
 
-### Day 6 — Practical Integration
-- Comparing tokenizers  
-- Inspecting tokenization in LLMs  
-- Understanding token count and its impact  
+### Day 6 — N-grams and Language Modeling Basics
+- Unigram, Bigram, Trigram  
+- N-gram language models  
+- Next word prediction  
+- Basic probability estimation  
+- Applications in search and correction  
+
+### Day 7 — Practical Integration
+- Compare tokenizers  
+- Analyze token distribution  
+- Tokenization impact on LLM cost  
+- Build a preprocessing + tokenization pipeline  
 
 ---
 
-## Phase 2 — Classical NLP
+## Phase 2 — Classical NLP Modeling
 
-Goal: Build intuition for traditional NLP methods and understand when they are more efficient than LLMs.
+Goal: Learn how NLP systems worked before deep learning and understand when they are still useful.
 
-### Day 7 — Bag of Words
-- Concept  
+### Day 8 — Bag of Words
+- Representation  
+- Sparse vectors  
 - Limitations  
 
-### Day 8 — TF-IDF
+### Day 9 — TF-IDF (Important)
 - Term Frequency  
 - Inverse Document Frequency  
-- Practical importance  
+- Why TF-IDF works  
+- Applications  
 
-### Day 9 — Similarity and Search
+### Day 10 — Similarity Systems
 - Cosine similarity  
+- Euclidean distance  
 - Document similarity systems  
 
-### Day 10 — Naive Bayes
-- Intuition  
-- Use cases  
+### Day 11 — Text Classification Models
+- Naive Bayes  
+- Multinomial vs Bernoulli  
+- Pipeline: TF-IDF → Classifier  
 
-### Day 11 — Logistic Regression
-- Core idea  
-- Why it is a strong baseline  
+### Day 12 — Logistic Regression and SVM
+- Logistic regression for text  
+- Decision boundary intuition  
+- SVM concept  
+- Model comparison  
 
-### Day 12 — SVM and Comparison
-- SVM intuition  
-- Comparison with other models  
+### Day 13 — Sequence Labeling Basics (Conceptual Understanding Only)
+- POS tagging  
+- Named Entity Recognition  
+- Hidden Markov Models  
+- CRF intuition  
 
-### Day 13 — Practical Project
-- Spam classification system  
-- Text similarity engine  
+### Day 14 — Classical NLP Project
+- Spam classifier  
+- Document similarity system  
+- Intent classifier  
 
 ---
 
-## Phase 3 — Embeddings
+## Phase 3 — Embeddings and Representation Learning
 
-Goal: Understand how meaning is represented numerically and used in modern AI systems.
+Goal: Understand how models capture meaning numerically.
 
-### Day 14 — Word2Vec
-- CBOW and Skip-Gram  
-- Semantic representations  
+### Day 15 — Word2Vec
+- CBOW  
+- Skip-Gram  
+- Vector space meaning  
 
-### Day 15 — GloVe and FastText
-- Co-occurrence-based learning  
+### Day 16 — GloVe and FastText
+- Co-occurrence matrices  
+- Character n-grams  
 - Handling rare words  
 
-### Day 16 — Embedding Applications
-- Similarity  
+### Day 17 — Embedding Applications
+- Semantic similarity  
 - Clustering  
-- Semantic search  
-
-### Day 17 — Modern Embeddings
-- Sentence transformers  
-- Embedding APIs  
-- Vector representations  
-
-### Day 18 — Vector Search Systems
-- FAISS and ChromaDB basics  
 - Retrieval systems  
 
-### Day 19 — Practical Project
-- Build a semantic search engine  
+### Day 18 — Modern Embeddings
+- Sentence embeddings  
+- Embedding APIs  
+- Embedding pipelines  
+
+### Day 19 — Vector Databases
+- FAISS  
+- ChromaDB  
+- Indexing and retrieval  
+
+### Day 20 — Semantic Search Project
+- Build semantic document search system  
 
 ---
 
-## Phase 4 — Transformers
+## Phase 4 — Transformers and LLMs
 
-Goal: Develop a deep understanding of transformer architecture and LLM behavior.
+Goal: Understand how modern language models actually work.
 
-### Day 20 — Attention Intuition
-- Motivation behind attention  
-- Context understanding  
+### Day 21 — Attention Mechanism
+- Why attention was introduced  
+- Context problem in NLP  
 
-### Day 21 — Self-Attention
-- Query, Key, Value  
-- Attention mechanism  
+### Day 22 — Self-Attention
+- Query  
+- Key  
+- Value  
+- Attention calculation  
 
-### Day 22 — Transformer Architecture
+### Day 23 — Transformer Architecture
 - Multi-head attention  
 - Positional encoding  
-- End-to-end flow  
+- Feed-forward layers  
+- Residual connections  
+- Layer normalization  
 
-### Day 23 — Model Types
+### Day 24 — Transformer Model Types
 - Encoder models (BERT)  
 - Decoder models (GPT)  
 - Encoder-decoder models (T5)  
 
-### Day 24 — Training and Behavior
-- Next token prediction  
-- Masked language modeling  
-- Model limitations  
+### Day 25 — Training Objectives
+- Masked Language Modeling  
+- Next Token Prediction  
+- Model behavior and hallucinations  
 
-### Day 25 — Fine-Tuning
+### Day 26 — Fine-Tuning Techniques
+- Full fine-tuning  
 - LoRA  
-- Prompt tuning  
 - Adapters  
+- Prompt tuning  
 
-### Day 26 — Practical Implementation
-- Using transformer models  
-- Running inference  
-- Analyzing outputs  
+### Day 27 — Practical Transformer Usage
+- Running models  
+- Understanding outputs  
+- Model comparison  
 
 ---
 
-## Phase 5 — GenAI Systems and AI Agents
+## Phase 5 — Modern GenAI Systems and AI Agents
 
-Goal: Build real-world AI systems using LLMs, retrieval, and agents.
+Goal: Build production-ready AI systems.
 
-### Day 27 — Prompt Engineering
-- Prompt structure  
-- Few-shot and zero-shot learning  
+### Day 28 — Prompt Engineering
+- Prompt design  
+- Few-shot vs zero-shot  
 
-### Day 28 — Retrieval-Augmented Generation
+### Day 29 — Retrieval-Augmented Generation
 - Architecture  
-- Workflow  
+- Retrieval pipeline  
+- Chunking strategies  
 
-### Day 29 — Build RAG System
-- Document processing  
-- Embedding-based retrieval  
-- LLM integration  
+### Day 30 — Build RAG System
+- Documents → embeddings → retrieval → LLM  
 
-### Day 30 — AI Agents Basics
+### Day 31 — AI Agents
 - Tool usage  
-- Memory  
-- Planning strategies  
-
-### Day 31 — Build AI Agent
-- Tool integration  
 - Memory systems  
+- Planning vs reactive agents  
 
-### Day 32 — Hybrid Systems
-- Combining rules, ML, and LLMs  
-- Decision strategies  
+### Day 32 — Agent Implementation
+- Build tool-using AI agent  
 
-### Day 33 — Optimization
+### Day 33 — Hybrid NLP Systems
+- Regex + ML + LLM pipelines  
+- When not to use LLMs  
+
+### Day 34 — Evaluation
+- Precision  
+- Recall  
+- F1 score  
+- BLEU  
+- ROUGE  
+- Perplexity (intuition)  
+
+### Day 35 — Optimization and Production
 - Quantization  
 - Distillation  
-- Performance trade-offs  
+- Cost optimization  
+- System design decisions  
 
-### Day 34 — Final Project
-- Build a complete AI system combining:
-  - Retrieval  
-  - Agents  
+### Day 36 — Final System Project
+- Build complete AI assistant system:
+  - RAG  
+  - Agent  
   - Fallback logic  
-
 ---
 
 ## Final Outcome
